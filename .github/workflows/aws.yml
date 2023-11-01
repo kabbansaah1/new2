@@ -30,8 +30,13 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 15 
+
     - name: Install NPM dependencies
-      run: npm install ../codebase/rdicidr-0.1.0/
+      run: npm install 
 
     - name: Build project assets
       run: npm run build
